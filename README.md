@@ -7,7 +7,7 @@
 * learn fascinating facts with images and audio guides
 
 
-![city-sage](./assets/city-sage.png)
+![city-sage](./public/city-sage.png)
 
 this is my project for nights and weekends [@danmana](https://x.com/danmana)
 
