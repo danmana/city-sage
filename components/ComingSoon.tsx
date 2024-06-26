@@ -21,7 +21,7 @@ export function ComingSoon() {
           width={1836}
           height={1256}
           alt="self guided walking tours made for you by ai"
-          className="w-full max-w-5xl rounded-xl border border-white overflow-hidden"
+          className="w-full max-w-5xl rounded-xl border border-white overflow-hidden max-h-[calc(90vh-160px)] max-w-[90vw]"
         />
       </Tilt>
     </div>
