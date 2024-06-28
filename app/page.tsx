@@ -1,17 +1,28 @@
-import Image from "next/image";
-import { ComingSoon } from "../components/ComingSoon";
+"use client";
+import { useState } from "react";
+import { CityNameForm } from "../components/city-name-form";
+import { InterestsForm } from "../components/interests-form";
 
 export default function Home() {
+  const [step, setStep] = useState(0);
+  const [cityName, setCityName] = useState("");
+  const [interests, setInterests] = useState("");
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-16 px-8">
-      <ComingSoon />
-      <footer className="mt-16 w-full text-center text-sm text-gray-400">
-        made with <span className="text-xl align-middle">❤️</span> by <span className="text-xl align-middle">🤖</span>{" "}
-        and{" "}
-        <a href="https://x.com/danmana" target="_blank" rel="noopener noreferrer" className="text-base">
-          @danmana
-        </a>
-      </footer>
-    </main>
+    <>
+      {step === 0 && <CityNameForm cityName={cityName} onChange={setCityName} onSubmit={() => setStep(1)} />}
+      {step === 1 && (
+        <InterestsForm
+          cityName={cityName}
+          onBack={() => setStep(0)}
+          onSubmit={(interests) => {
+            setInterests(interests);
+            if (interests) {
+              setStep(2);
+            }
+          }}
+        />
+      )}
+    </>
   );
 }
