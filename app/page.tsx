@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { CityNameForm } from "../components/city-name-form";
 import { InterestsForm } from "../components/interests-form";
+import { WalkingTour } from "../components/walking-tour";
 
 export default function Home() {
   const [step, setStep] = useState(0);
@@ -23,6 +24,7 @@ export default function Home() {
           }}
         />
       )}
+      {step === 2 && <WalkingTour cityName={cityName} interests={interests} onBack={() => setStep(0)} />}
     </>
   );
 }

@@ -26,6 +26,7 @@ To read more about using these font, please visit the Next.js documentation:
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { LandmarkIcon, LibraryIcon, TreesIcon, UtensilsIcon, BeerIcon, ArrowLeftIcon } from "lucide-react";
 
 const predefinedInterests = [
   { label: "Landmarks", icon: <LandmarkIcon className="mr-2 h-4 w-4" /> },
@@ -61,8 +62,12 @@ export function InterestsForm({
           </h1>
           <p className="text-lg text-primary-foreground/80">
             What do you want to see in{" "}
-            <a className="text-primary-foreground italic capitalize underline underline-offset-4 decoration-2 hover:text-primary transition-all cursor-pointer white" onClick={onBack}>
-              {" "}{cityName}{" "}
+            <a
+              className="text-primary-foreground italic capitalize underline underline-offset-4 decoration-2 hover:text-primary transition-all cursor-pointer white"
+              onClick={onBack}
+            >
+              {" "}
+              {cityName}{" "}
             </a>
             {" ?"}
           </p>
@@ -106,137 +111,5 @@ export function InterestsForm({
         </div>
       </div>
     </div>
-  );
-}
-
-function BeerIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M17 11h1a3 3 0 0 1 0 6h-1" />
-      <path d="M9 12v6" />
-      <path d="M13 12v6" />
-      <path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z" />
-      <path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" />
-    </svg>
-  );
-}
-
-function LandmarkIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="3" x2="21" y1="22" y2="22" />
-      <line x1="6" x2="6" y1="18" y2="11" />
-      <line x1="10" x2="10" y1="18" y2="11" />
-      <line x1="14" x2="14" y1="18" y2="11" />
-      <line x1="18" x2="18" y1="18" y2="11" />
-      <polygon points="12 2 20 7 4 7" />
-    </svg>
-  );
-}
-
-function LibraryIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m16 6 4 14" />
-      <path d="M12 6v14" />
-      <path d="M8 8v12" />
-      <path d="M4 4v16" />
-    </svg>
-  );
-}
-
-function TreesIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M10 10v.2A3 3 0 0 1 8.9 16v0H5v0h0a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
-      <path d="M7 16v6" />
-      <path d="M13 19v3" />
-      <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" />
-    </svg>
-  );
-}
-
-function UtensilsIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
-      <path d="M7 2v20" />
-      <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
-    </svg>
-  );
-}
-
-function ArrowLeftIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m12 19-7-7 7-7" />
-      <path d="M19 12H5" />
-    </svg>
   );
 }
